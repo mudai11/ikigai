@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 240 3.7% 15.9%;
+
+    --radius: 0.5rem;
+
+    --plyr-color-main: #ffff;
+    --plyr-video-control-background-hover: rgb(34, 34, 34);
+    --plyr-menu-background: rgb(38, 38, 39);
+    --plyr-menu-color: #ffff;
+    --plyr-menu-arrow-size: 0;
+    --plyr-menu-border-color: 0 0% 98%;
+    --plyr-badge-background: transparent;
+    --plyr-tooltip-arrow-size: 0;
+    --plyr-font-size-small: 13px;
+    --plyr-font-size-base: 30px;
+    --plyr-font-size-large: 30px;
+    --plyr-font-size-xlarge: 30px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter);
+  }
+}
+
+::-moz-selection {
+  color: black;
+  background: white;
+}
+
+::selection {
+  color: black;
+  background: white;
+}
+
+video {
+  aspect-ratio: 16/9;
+}
+.plyr--video {
+  aspect-ratio: 16 / 9;
+}
+.scrollbar-w-2::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.25rem;
+}
+.scrollbar-w-3::-webkit-scrollbar {
+  width: 0.35rem;
+  height: 0.35rem;
+}
+.scrollbar-w-5::-webkit-scrollbar {
+  width: 0.55rem;
+  height: 0.55rem;
+}
+.scrollbar-track-gray-lighter::-webkit-scrollbar-track {
+  --bg-opacity: 1;
+  background-color: #f7fafc;
+  background-color: rgba(0, 0, 0, var(--bg-opacity));
+}
+.scrollbar-thumb-gray::-webkit-scrollbar-thumb {
+  --bg-opacity: 0.3;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, var(--bg-opacity));
+}
+.scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+}
+.scrollbar-track-gray-lighter::-webkit-scrollbar-track {
+  --bg-opacity: 1;
+  background-color: #f7fafc;
+  background-color: rgba(0, 0, 0, var(--bg-opacity));
+}
+.scrollbar-thumb-white::-webkit-scrollbar-thumb {
+  --bg-opacity: 0.3;
+  background-color: #ffff;
+}
